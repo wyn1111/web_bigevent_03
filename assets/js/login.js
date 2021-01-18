@@ -55,8 +55,9 @@ $(function () {
             url:'/api/login',
             data:$(this).serialize(),
             success:function(res){
+                // console.log(res);
                 if(res.status !== 0){
-                    return layer.msg(res.massage)
+                    return layer.msg(res.message)
                 }
                 layer.msg('恭喜你，登录成功')
                 localStorage.setItem('token',res.token)
